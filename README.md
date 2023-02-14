@@ -1,2 +1,20 @@
 # registry-stack
-[как расшарить реджистри в кластере сворм](https://yandex.ru/search/?text=%D0%BA%D0%B0%D0%BA+%D1%80%D0%B0%D1%81%D1%88%D0%B0%D1%80%D0%B8%D1%82%D1%8C+registry+%D0%B2+%D0%BA%D0%BB%D0%B0%D1%81%D1%82%D0%B5%D1%80%D0%B5+swarm&lr=2)
+>
+>```mermaid
+>sequenceDiagram
+>    usr->>+dzen: как расшарить реджистри в кластере сворм ?
+>    dzen->>+usr: clck.ru/33YFxM
+>```
+>
+setup [nextcloud](https://docs.docker.com/samples/nextcloud/) before: 
+## nextcloud service
+[43321999/nextcloud-stack](https://github.com/43321999/nextcloud-stack)
+
+```sh
+	# registry service
+	mkdir -p ~/apps/registry && cd $_
+	wget https://github.com/43321999/registry-stack/blob/b8fc3cdb6954d266d20ae100061b6c9533d3c0e4/apps/registry-stack.yml
+
+	docker stack deploy -c registry-stack.yml .
+```
+```# cat ~/apps/registry-stack.yml:```
