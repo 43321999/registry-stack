@@ -5,8 +5,10 @@ services:
     environment:
       - REGISTRY_STORAGE_DELETE_ENABLED=true
       - REGISTRY_HTTP_ADDR=0.0.0.0:1027
+      #-??? REGISTRY_HTTP_ADDR=[::]:1027
     ports:
       - 1027:1027
+      # curl [::1]:1025
     deploy:
       replicas: 1
       labels:
